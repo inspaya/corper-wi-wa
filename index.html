@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
-    <div class="container">
+    <div class="col">
 
         <nav>
           <div class="logo">
@@ -32,37 +32,121 @@
 
           <div class="content">
             <form class="form" action="/register" method="POST">
-              <input type="text" name="first_name" placeholder="First Name">
-              <input type="text" name="last_name" placeholder="Last Name">
-              <input type="email" name="email" placeholder="Email">
-              <input type="text" name="phone number" placeholder="Phone Number">
 
-              <label class="radio">
-                <span class="radio_input">
-                  <input type="radio" name="gender" />
-                  <span class="radio_control"></span>
-                </span>
-                <span class="radio_label">Male</span>
-              </label>
+              <div class="field">
+                <label for="first_name">First Name</label>
+                <input id="first_name" type="text" name="first_name" placeholder="john">
+              </div>
 
-              <label class="radio">
-                <span class="radio_input">
-                  <input type="radio" name="gender">
-                  <span class="radio_control"></span>
-                </span>
-                <span class="radio_label">Female</span>
-              </label>
 
-              <input type="text" name="first name" placeholder="NYSC Batch/Stream/Call up">
-              <input type="text" name="first name" placeholder="Type Of Degree">
-              <input type="text" name="first name" placeholder="Area of study">
-              <input type="text" name="first name" placeholder="Previous Programming Knowledge">
+
+              <div class="field">
+                <label for="first_name">Last Name</label>
+                <input id="last_name" type="text" name="last_name" placeholder="doe">
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="johndoe@gmail.com">
+              </div>
+
+              <div class="field">
+                <label for="contact">Phone Number</label>
+                <input id="contact" type="text" name="contact" placeholder="080123456789">
+              </div>
+
+              <div class="field">
+                <label>Gender</label>
+                <div class="wrapper">
+                  <input type="radio" name="gender" id="option-1">
+                  <input type="radio" name="gender" id="option-2" />
+                  <label for="option-1" class="option option-1">
+                    <div class="dot"></div>
+                    <span>Male</span>
+                  </label>
+                  <label for="option-2" class="option option-2">
+                    <div class="dot"></div>
+                    <span>Female</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="NYSC">NYSC Batch/Stream/Call up</label>
+                <input type="text" name="nysc" placeholder="NYSC Batch/Stream/Call up">
+              </div>
+
+              <div class="field">
+                <label for="Degree">Type Of Degree</label>
+                <input type="text" name="TOD" placeholder="e.g B.sc">
+              </div>
+
+              <div class="field">
+                <label for="study">Area of study</label>
+                <input type="text" name="AOS" placeholder="e.g Computer Science">
+              </div>
+
+              <div class="field">
+                <label>Any Previous Programming Knowledge?</label>
+                <div class="wrapper">
+                  <input type="radio" name="select" id="yes">
+                  <input type="radio" name="select" id="no" />
+                  <label for="yes" class="opt yes">
+                    <div class="dot"></div>
+                    <span>Yes</span>
+                  </label>
+                  <label for="no" class="opt no">
+                    <div class="dot"></div>
+                    <span>No</span>
+                  </label>
+                </div>
+              </div>
+
+
+
+              <div class="row">
+                <div class="tech">
+                  <label class="container">HTML/CSS
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">JavaScript
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Python
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">PHP
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="tech">
+                  <label class="container">SQL
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Java
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">TypeScript
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Java
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+
               <button type="button" name="button">Register</button>
             </form>
-
           </div>
-
-          <p>@istemlabsafrica</p>
+          <p>@iSTEMLabsAfrica</p>
         </section>
     </div>
 
