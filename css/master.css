@@ -51,7 +51,7 @@ nav {
 }
 
 .jumbotron {
-  /* margin-top: 5em; */
+  border: 1px solid magenta;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,7 +177,7 @@ p {
 
 }
 
-
+/* Rdaio-button */
 .wrapper{
   display: inline-flex;
   background: #fff;
@@ -269,7 +269,10 @@ input[type="radio"]{
   color: #fff;
 }
 
+/* ------------------------------------------------- */
 
+
+/* checkbox */
 
 .row {
   display: flex;
