@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>iSTEMLabsAfrica Registration Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body>
+    <div class="col">
+
+        <nav>
+          <div class="logo">
+            <img src="image/logo.png" alt="istemlabsafrica">
+          </div>
+
+          <div class="jumbotron">
+            <img src="image/pana.png" alt="a female software engineer">
+          </div>
+        </nav>
+
+        <section>
+          <div class="content">
+            <div class="title">
+              <h1>Register Now</h1>
+              <h5>Join the upcoming SAED training</h5>
+            </div>
+          </div>
+
+          <div class="content">
+            <form class="form" action="/register" method="POST">
+
+              <div class="field">
+                <label for="first_name">First Name</label>
+                <input id="first_name" type="text" name="first_name" placeholder="john">
+              </div>
+
+
+
+              <div class="field">
+                <label for="first_name">Last Name</label>
+                <input id="last_name" type="text" name="last_name" placeholder="doe">
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="johndoe@gmail.com">
+              </div>
+
+              <div class="field">
+                <label for="contact">Phone Number</label>
+                <input id="contact" type="text" name="contact" placeholder="080123456789">
+              </div>
+
+              <div class="field">
+                <label>Gender</label>
+                <div class="wrapper">
+                  <input type="radio" name="gender" id="option-1">
+                  <input type="radio" name="gender" id="option-2" />
+                  <label for="option-1" class="option option-1">
+                    <div class="dot"></div>
+                    <span>Male</span>
+                  </label>
+                  <label for="option-2" class="option option-2">
+                    <div class="dot"></div>
+                    <span>Female</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="NYSC">NYSC Batch/Stream/Call up</label>
+                <input type="text" name="nysc" placeholder="NYSC Batch/Stream/Call up">
+              </div>
+
+              <div class="field">
+                <label for="Degree">Type Of Degree</label>
+                <input type="text" name="TOD" placeholder="e.g B.sc">
+              </div>
+
+              <div class="field">
+                <label for="study">Area of study</label>
+                <input type="text" name="AOS" placeholder="e.g Computer Science">
+              </div>
+
+              <div class="field">
+                <label>Any Previous Programming Knowledge?</label>
+                <div class="wrapper">
+                  <input type="radio" name="select" id="yes">
+                  <input type="radio" name="select" id="no" />
+                  <label for="yes" class="opt yes">
+                    <div class="dot"></div>
+                    <span>Yes</span>
+                  </label>
+                  <label for="no" class="opt no">
+                    <div class="dot"></div>
+                    <span>No</span>
+                  </label>
+                </div>
+              </div>
+
+
+
+              <div class="row">
+                <div class="tech">
+                  <label class="container">HTML/CSS
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">JavaScript
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Python
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">PHP
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="tech">
+                  <label class="container">SQL
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Java
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">TypeScript
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Java
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+
+              <button type="button" name="button">Register</button>
+            </form>
+          </div>
+          <p>@iSTEMLabsAfrica</p>
+        </section>
+    </div>
+
+  </body>
+</html>

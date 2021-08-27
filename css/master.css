@@ -1,0 +1,347 @@
+@-ms-viewport {
+  width: device-width;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #ED1C24;
+  --black: #161616;
+  --backdrop: #FAFAFA;
+  --grey: #BBBBBB;
+  --lightgrey: #d9d9d9;
+  --white: #ffffff;
+  --black80: #80808;
+
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125rem;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 1.85rem;
+  margin-bottom: 0;
+  color: var(--red);
+}
+
+h5 {
+  margin-top: .5em;
+  color: var(--black);
+}
+
+/* Layout */
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  margin: 1em 0;
+  display: flex;
+  padding:0 1em;
+}
+
+.jumbotron {
+  border: 1px solid magenta;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.jumbotron img {
+  width: 50%;
+}
+
+section {
+  /* margin-top: 5em; */
+  background-color: var(--backdrop);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid magenta; */
+}
+
+.title {
+  padding: 1em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  /* border: 1px solid red; */
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.field > label {
+  font-size: .875em;
+  font-weight: 500;
+}
+
+input {
+  /* width: 70%; */
+  margin-top: .6em;
+  padding: 1em;
+  letter-spacing: .08em;
+  font-size: .875rem;
+  border: 2px solid var(--grey);
+}
+
+button {
+  font-size: 1.125rem;
+  margin-top: 2em;
+  letter-spacing: .08em;
+  padding: 1em;
+  background-color: var(--black);
+  color: var(--white);
+  border: 0;
+  transition: 185ms all ease-in-out;
+}
+
+button:hover {
+  background-color: var(--red);
+  box-shadow: 5px 5px 30px rgba(255,0,0,0.2);
+}
+
+p {
+  text-align: center;
+  margin: 2em 0;
+  font-size: .875rem;
+  letter-spacing: .1rem;
+  color: var(--red);
+  opacity: .5;
+  font-weight: 500;
+
+}
+
+
+@media (min-width: 768px) {
+  .col {
+    display: flex;
+    width: 100%;
+  }
+
+  .jumbotron img {
+    width: 60%;
+  }
+
+  section {
+    margin: 0;
+    width: 60%;
+  }
+
+  nav {
+    width: 40%;
+  }
+
+  .logo,
+  .jumbotron {
+    position: relative;
+  }
+
+  .logo,
+  .jumbotron {
+    position: fixed;
+  }
+
+  .jumbotron {
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%);
+  }
+
+  .jumbotron img {
+    width: 40%;
+  }
+
+}
+
+/* Rdaio-button */
+.wrapper{
+  display: inline-flex;
+  background: #fff;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 1em;
+  margin: .6em 0;
+  border: 2px solid var(--grey);
+  /* box-shadow: 5px 5px 30px rgba(0,0,0,0.2); */
+}
+.wrapper .option,
+.wrapper .opt{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 .8em;
+  cursor: pointer;
+  padding: .5em 1em;
+  /* border: 2px solid var(--grey); */
+  transition: all 0.3s ease;
+}
+
+.wrapper + label {
+  line-height: 1em;
+}
+
+.wrapper .option .dot,
+.wrapper .opt .dot{
+  height: 20px;
+  width: 20px;
+  margin-right: .5em;
+  background: var(--lightgrey);
+  border-radius: 50%;
+  position: relative;
+}
+
+.wrapper .option .dot::before,
+.wrapper .opt .dot::before {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: .75em;
+  height: .75em;
+  background: var(--red);
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+
+input[type="radio"]{
+  display: none;
+}
+
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2,
+#yes:checked:checked ~ .yes,
+#no:checked:checked ~ .no {
+  border-color: var(--white);
+  background: var(--red);
+}
+
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot,
+#yes:checked:checked ~ .yes .dot,
+#no:checked:checked ~ .no .dot {
+  background: #fff;
+}
+
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before,
+#yes:checked:checked ~ .yes .dot::before,
+#no:checked:checked ~ .no .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.wrapper .option span{
+  font-size: 1.125rem;
+  color: var(--black80);
+}
+
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span,
+#yes:checked:checked ~ .yes span,
+#no:checked:checked ~ .no span{
+  color: #fff;
+}
+
+/* ------------------------------------------------- */
+
+
+/* checkbox */
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 2em;
+  margin-bottom: 1em;
+  cursor: pointer;
+  font-size: .875em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: var(--lightgrey);
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: var(--white);
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: var(--red);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
